@@ -50,7 +50,9 @@ ORDER BY o.order\_date;
 
 
 
-Screenshot (Question1.png)
+Screenshot <img width="1001" height="632" alt="Q2" src="https://github.com/user-attachments/assets/8ee4af2e-e6bd-43e6-bd73-c96b71c1af86" />
+<img width="997" height="660" alt="Question1" src="https://github.com/user-attachments/assets/204f4098-699f-40be-97d7-b556275498ad" />
+
 
 
 
@@ -71,6 +73,7 @@ ORDER BY oi.order\_id;
 Shows exactly what was purchased in each order line.
 
 (Q2.png)
+<img width="1001" height="632" alt="Q2" src="https://github.com/user-attachments/assets/98e21f11-fd55-4a13-8f0d-e5f7187f074a" />
 
 
 
@@ -93,6 +96,7 @@ Keeps every customer even with no matching orders — reveals Esther Ingabire
 has never placed an order.
 
 (Q3.png)
+<img width="1021" height="447" alt="Q3" src="https://github.com/user-attachments/assets/1079d713-3fe9-43d8-a997-daf5f1290edd" />
 
 
 
@@ -134,6 +138,7 @@ the average of that same set.
 
 (Q4.png)
 
+<img width="1010" height="364" alt="Q4" src="https://github.com/user-attachments/assets/ea199f50-a9e1-447e-bdbb-18f93dbd4308" />
 
 
 &#x20;5. Customer ranking by spend (RANK window function)
@@ -166,6 +171,7 @@ FROM customer\_totals;
 
 (Q5.png)
 
+<img width="982" height="364" alt="Q5" src="https://github.com/user-attachments/assets/6cd4daae-8eea-4b8a-b56a-61f4330f6e6a" />
 
 
 &#x20;6. Order sequence per customer (ROW\_NUMBER window function)
@@ -182,6 +188,7 @@ FROM orders;
 
 (Q6.png)
 
+<img width="1005" height="371" alt="Q6" src="https://github.com/user-attachments/assets/d5625a34-9753-416a-a60f-f6e1b80d92ca" />
 
 
 &#x20;7. Running revenue total (SUM window function)
@@ -213,6 +220,7 @@ ORDER BY order\_date;
 ```
 
 (Q7.png)
+<img width="998" height="547" alt="Q7" src="https://github.com/user-attachments/assets/fe0d4d86-12e9-4ef2-9492-2888a48b2527" />
 
 
 
@@ -231,6 +239,7 @@ ORDER BY customer\_id, order\_date;
 ```
 
 (Q8.png)
+<img width="998" height="447" alt="Q8" src="https://github.com/user-attachments/assets/bd2f3cc3-bd0c-4086-93fd-576f0ee0e740" />
 
 
 
