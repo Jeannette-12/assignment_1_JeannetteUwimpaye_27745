@@ -50,8 +50,8 @@ ORDER BY o.order\_date;
 
 
 
-Screenshot <img width="1001" height="632" alt="Q2" src="https://github.com/user-attachments/assets/8ee4af2e-e6bd-43e6-bd73-c96b71c1af86" />
-<img width="997" height="660" alt="Question1" src="https://github.com/user-attachments/assets/204f4098-699f-40be-97d7-b556275498ad" />
+Screenshot <img width="997" height="660" alt="Question1" src="https://github.com/user-attachments/assets/a58bb733-612a-441e-b296-20a6dc70615b" />
+
 
 
 
@@ -79,7 +79,7 @@ Shows exactly what was purchased in each order line.
 
 &#x20;3. All customers including those with no orders (LEFT JOIN)
 
-```sql
+sql
 
 SELECT c.customer\_name, o.order\_id, o.order\_date
 
@@ -102,7 +102,7 @@ has never placed an order.
 
 &#x20;4. Customers spending above average (CTE)
 
-```sql
+
 
 WITH customer\_totals AS (
 
@@ -130,7 +130,7 @@ WHERE total\_spent > (SELECT AVG(total\_spent) FROM customer\_totals)
 
 ORDER BY total\_spent DESC;
 
-```
+
 
 The CTE computes per-customer totals once; the outer query filters against
 
@@ -143,7 +143,7 @@ the average of that same set.
 
 &#x20;5. Customer ranking by spend (RANK window function)
 
-```sql
+sql
 
 WITH customer\_totals AS (
 
@@ -167,7 +167,7 @@ SELECT customer\_name, total\_spent,
 
 FROM customer\_totals;
 
-```
+
 
 (Q5.png)
 
@@ -176,7 +176,7 @@ FROM customer\_totals;
 
 &#x20;6. Order sequence per customer (ROW\_NUMBER window function)
 
-```sql
+sql
 
 SELECT customer\_id, order\_id, order\_date,
 
@@ -184,7 +184,6 @@ SELECT customer\_id, order\_id, order\_date,
 
 FROM orders;
 
-```
 
 (Q6.png)
 
@@ -193,7 +192,7 @@ FROM orders;
 
 &#x20;7. Running revenue total (SUM window function)
 
-```sql
+sql
 
 WITH order\_revenue AS (
 
@@ -217,7 +216,7 @@ FROM order\_revenue
 
 ORDER BY order\_date;
 
-```
+
 
 (Q7.png)
 <img width="998" height="547" alt="Q7" src="https://github.com/user-attachments/assets/fe0d4d86-12e9-4ef2-9492-2888a48b2527" />
@@ -226,7 +225,7 @@ ORDER BY order\_date;
 
 &#x20;8. Days between orders per customer (LAG window function)
 
-```sql
+sql
 
 SELECT customer\_id, order\_id, order\_date,
 
@@ -236,7 +235,7 @@ FROM orders
 
 ORDER BY customer\_id, order\_date;
 
-```
+
 
 (Q8.png)
 <img width="998" height="447" alt="Q8" src="https://github.com/user-attachments/assets/bd2f3cc3-bd0c-4086-93fd-576f0ee0e740" />
